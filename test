@@ -58,3 +58,6 @@ pipelines:
                     - "VERBOSE=true"
                # shorthand for script-executor plugin
                - script: ./build.sh ci
+
+
+#testtesttest
