@@ -1,0 +1,29 @@
+format_version: 10
+pipelines:
+  q:
+    group: Semp
+    label_template: 1
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-fdee270:
+        git: w
+        shallow_clone: false
+        auto_update: true
+        branch: main
+    stages:
+    - q_stage:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          q_job:
+            timeout: 0
+            tasks:
+            - exec:
+                command: e
+                run_if: passed
+    
