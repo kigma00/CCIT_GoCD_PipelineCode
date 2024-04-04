@@ -2,7 +2,7 @@ format_version: 10
 pipelines:
   GoCD_test_Pipe:
     group: codeQL
-    label_template: ${COUNT}
+    label_template: 2
     lock_behavior: none
     display_order: -1
     materials:
