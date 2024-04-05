@@ -7,12 +7,12 @@ pipelines:
     display_order: -1
     materials:
       git-fdee270:
-        git: w
+        git: https://github.com/kigma00/CCIT_GoCD_PipelineCode
         shallow_clone: false
         auto_update: true
         branch: main
     stages:
-    - q_stage:
+    - q_stage: 
         fetch_materials: true
         keep_artifacts: false
         clean_workspace: false
