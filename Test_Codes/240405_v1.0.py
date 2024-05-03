@@ -14,7 +14,8 @@ Github_token = input("token :")
 Github_path = {GoCD_pipeline}.yaml
 
 # Create YAML file 
-template = f'''
+template = 
+f'''
 format_version: 10
 pipelines:
   {GoCD_pipeline}:
