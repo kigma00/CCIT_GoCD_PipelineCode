@@ -26,4 +26,10 @@ pipelines:
             - exec:
                 command: e
                 run_if: passed
-    
+
+rules:
+  allow:
+    - refer:
+        - codeQL
+        - Semp
+        - 240405_test
