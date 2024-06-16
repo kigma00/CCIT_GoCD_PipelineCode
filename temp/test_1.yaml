@@ -1,27 +1,32 @@
 format_version: 10
+environment:
+  seceret:
 pipelines:
   pipeline-test_1:
     group: pipeline_test
-    label_template: "${COUNT}"
+    label_template: 1
     lock_behavior: none
     display_order: -1
     materials:
-      git:
-        url: https://github.com/kigma00/CCIT_GoCD_PipelineCode
+      git-d86ad4c:
+        git: "https://github.com/kigma00/CCIT_GoCD_PipelineCode"
         shallow_clone: false
         auto_update: true
         branch: main
     stages:
-      - name: stage-test_1
+    - stage-test_1:
         fetch_materials: true
         keep_artifacts: false
         clean_workspace: false
         approval:
           type: success
+          allow_only_on_success: false
         jobs:
-          - name: job-test_1
+          job-test_1:
             timeout: 0
             tasks:
               - exec:
-                  command: ls
-                  run_if: passed
+                arguments:
+                  - Upload test
+                command: echo
+                run_if: passed
