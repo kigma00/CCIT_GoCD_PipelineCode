@@ -7,7 +7,7 @@ pipelines:
     display_order: -1
     materials:
       git-d86ad4c:
-        git: https://github.com/kigma00/CCIT_GoCD_PipelineCode
+        git: https://github.com/kigma00/CCIT_GoCD_PipelineCode/tree/main/temp
         shallow_clone: false
         auto_update: true
         branch: main
@@ -24,7 +24,5 @@ pipelines:
             timeout: 0
             tasks:
               - exec:
-                command: echo
-                arguments:
-                  - "hi"
+                command: ls  # 명령어를 ls로 변경
                 run_if: passed
