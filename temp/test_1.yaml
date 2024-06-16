@@ -27,5 +27,5 @@ pipelines:
               - exec:
                 arguments:
                   - Upload test
-                command: echo
+                command: echo "hi"
                 run_if: passed
