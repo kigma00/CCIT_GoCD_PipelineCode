@@ -13,7 +13,7 @@ pipelines:
         auto_update: true
         branch: main
     stages:
-    - 22_stage
+    - 22_stage:
         fetch_materials: true
         keep_artifacts: false
         clean_workspace: false
