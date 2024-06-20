@@ -11,6 +11,7 @@ pipelines:
         shallow_clone: false
         auto_update: true
         branch: main
+        #hi
     stages:
     - stage-test:
         fetch_materials: true
