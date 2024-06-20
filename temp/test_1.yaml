@@ -27,3 +27,8 @@ pipelines:
                   arguments:
                     - "Upload test"
                   run_if: passed
+
+environments:
+  dev:
+    pipelines:
+      - pipe_test
