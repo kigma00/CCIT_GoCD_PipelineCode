@@ -6,11 +6,11 @@ pipelines:
     lock_behavior: none
     display_order: -1
     materials:
-      - git:
-          url: "https://github.com/kigma00/CCIT_GoCD_PipelineCode"
-          shallow_clone: false
-          auto_update: true
-          branch: main
+      git:  # materials 섹션은 해시 형식이어야 합니다.
+        url: "https://github.com/kigma00/CCIT_GoCD_PipelineCode"
+        shallow_clone: false
+        auto_update: true
+        branch: main
     stages:
       - name: stage_test
         fetch_materials: true
