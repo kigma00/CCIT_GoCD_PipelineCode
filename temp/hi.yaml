@@ -24,5 +24,12 @@ pipelines:
             timeout: 0
             tasks:
             - exec:
-                command: ls
-                run_if: passed
+                  command: echo
+                  arguments:
+                    - "test"
+                  run_if: passed
+
+environments:
+  dev:
+    pipelines:
+      - pipe_test
