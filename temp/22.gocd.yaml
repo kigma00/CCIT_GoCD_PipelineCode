@@ -21,7 +21,7 @@ pipelines:
           type: success
           allow_only_on_successs: false
         jobs:
-          22_job
+          22_job:
             timeout: 0
             tasks:
               - exec:
