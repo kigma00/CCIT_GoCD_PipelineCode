@@ -24,7 +24,7 @@ pipelines:
             timeout: 0
             tasks:
               - exec:
-                arguments:
-                  - Upload test
-                command: echo
-                run_if: passed
+                  command: echo
+                  arguments:
+                    - "Hello, GoCD!"
+                  run_if: passed
