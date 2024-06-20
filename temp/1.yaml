@@ -1,25 +1,26 @@
+---
 format_version: 10
 pipelines:
-  pipe_test:
+  pipe_test_unique:
     group: defaultGroup
-    label_template: ${COUNT}
+    label_template: "${COUNT}"
     lock_behavior: none
     display_order: -1
     materials:
-      my-git:
-        git: "https://github.com/kigma00/CCIT_GoCD_PipelineCode"
+      git:
+        url: "https://github.com/kigma00/CCIT_GoCD_PipelineCode"
         shallow_clone: false
         auto_update: true
         branch: main
     stages:
-    - stage_test:
+      - name: stage_test
         fetch_materials: true
         keep_artifacts: false
         clean_workspace: false
         approval:
           type: success
         jobs:
-          jobntasks_test:
+          - name: jobntasks_test
             timeout: 0
             tasks:
               - exec:
