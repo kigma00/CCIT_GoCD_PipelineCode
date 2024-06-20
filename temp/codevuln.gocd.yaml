@@ -1,0 +1,29 @@
+
+    format_version: 10
+    pipelines:
+      codevuln:
+        group: codevuln
+        label_template: ${COUNT}
+        lock_behavior: none
+        display_order: -1
+        materials:
+          git:
+            url: "https://github.com/kigma00/CCIT_GoCD_PipelineCode"
+            shallow_clone: false
+            auto_update: true
+            branch: main
+        stages:
+          - name: codevuln_stage
+            fetch_materials: true
+            keep_artifacts: false
+            clean_workspace: false
+            approval:
+              type: success
+            jobs:
+              - name: codevuln_job
+                timeout: 0
+                tasks:
+                  - exec:
+                      command: ls
+                      run_if: passed
+    
