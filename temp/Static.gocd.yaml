@@ -26,6 +26,6 @@
                 timeout: 0
                 tasks:
                 - exec:
-                    command: ls
+                    command: /home/hello
                     run_if: passed
     
