@@ -11,7 +11,7 @@ pipelines:
         git: https://github.com/kigma00/mongo_gocdtest
         shallow_clone: false
         auto_update: true
-        branch: main
+        branch: master
     stages:
     - mongodb_stage:
         fetch_materials: true
