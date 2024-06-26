@@ -26,7 +26,7 @@ pipelines:
             tasks:
             - exec:
                 command: /home/2024_CCIT_codevuln/Automation_Code/gocd-query-setting.sh
-                argument:
+                arguments:
                   - https://github.com/kigma00/mongo_gocdtest
                   - javascript
                 run_if: passed
