@@ -25,6 +25,6 @@ pipelines:
             timeout: 0
             tasks:
             - exec:
-                command: ls #/home/2024_CCIT_codevuln/Automation_Code/gocd-query-setting.sh
+                command: /home/2024_CCIT_codevuln/Automation_Code/gocd-query-setting.sh
                 run_if: passed
     
