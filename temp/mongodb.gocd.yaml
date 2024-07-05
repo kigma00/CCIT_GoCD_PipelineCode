@@ -11,7 +11,7 @@ pipelines:
         git: https://github.com/mongodb/mongo
         shallow_clone: false
         auto_update: true
-        branch: main
+        branch: master
     stages:
     - GoCD_PipelineCode_stage:
         fetch_materials: true
