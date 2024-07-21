@@ -1,30 +1,29 @@
 
-    format_version: 10
-    pipelines:
-      {GoCD_pipeline}:
-        group: {GoCD_group}
-        label_template: ${COUNT}
-        lock_behavior: none
-        display_order: -1
-        materials:
-          git:
-            git: {GoCD_giturl}
-            shallow_clone: false
-            auto_update: true
-            branch: main
-        stages:
-        - {GoCD_pipeline}_stage:
-            fetch_materials: true
-            keep_artifacts: false
-            clean_workspace: false
-            approval:
-              type: success
-              allow_only_on_success: false
-            jobs:
-            - {GoCD_pipeline}_job:
-                timeout: 0
-                tasks:
-                - exec:
-                    command: {test_shell_script}
-                    run_if: passed
-    
+format_version: 10
+pipelines:
+  test:
+    group: gocd_test
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git:
+        git: https://github.com/kigma00/CCIT_GoCD_PipelineCode
+        shallow_clone: false
+        auto_update: true
+        branch: main
+    stages:
+    - test_stage:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+        - test_job:
+            timeout: 0
+            tasks:
+            - exec:
+                command: /home/2024_CCIT_codevuln/Automation_Code/gocd-query-setting.sh
+                run_if: passed
