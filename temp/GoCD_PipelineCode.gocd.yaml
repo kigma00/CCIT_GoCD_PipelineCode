@@ -8,7 +8,7 @@ pipelines:
     display_order: -1
     materials:
       git:
-        git: https://github.com/mongodb/mongo
+        git: https://github.com/kigma00/mongo_gocdtest
         shallow_clone: false
         auto_update: true
         branch: master
